@@ -110,7 +110,7 @@ async function showTaiwanShape() {
 
   // 設定圖層樣式（可自行定義）
   geojsonLayer.setStyle({
-    color: "white",
+    color: "black",
     weight: 0.5,
     Opacity: 0.1,
     fillOpacity: 0,
@@ -131,12 +131,10 @@ async function StationsInformation() {
     stations = data.records.location;
   }
 
-  // 使用 D3 繪製觀測站位置
   drawObservationStations(stations);
 
-  // 創建一個 D3 繪製函式
   function drawObservationStations(stations) {
-    // 在地圖上創建 D3 疊加層
+    // 在地圖上創建 疊加層
     L.svg().addTo(map);
 
     stationMarkers = L.layerGroup().addTo(map);
@@ -148,7 +146,7 @@ async function StationsInformation() {
       // Create a Leaflet circle marker for each station
       const circleMarker = L.circleMarker(latlng, {
         radius: 5,
-        fillColor: "white",
+        fillColor: "black",
         fillOpacity: 0.7,
         color: "transparent", // 設定邊線顏色為透明色
       }).addTo(stationMarkers);
