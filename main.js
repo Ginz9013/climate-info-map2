@@ -335,7 +335,7 @@ async function uviInfoPage() {
         fillColor: getColorByUvi(uvi), // 使用自訂函式來取得顏色
         weight: 1,
         color: "white",
-        fillOpacity: 0.3,
+        fillOpacity: 0.8,
       };
     },
   }).addTo(map);
