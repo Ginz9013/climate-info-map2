@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoMaps</title>
+
+    <!-- Leaflet.css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <!-- NoUiSlider.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.css"
+      integrity="sha512-MKxcSu/LDtbIYHBNAWUQwfB3iVoG9xeMCm32QV5hZ/9lFaQZJVaXfz9aFa0IZExWzCpm7OWvp9zq9gVip/nLMg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Style.css -->
+    <link rel="stylesheet" href="./stylesheet/main.css" />
+  </head>
+  <body>
+    <div id="map" style="height: 100vh"></div>
+
+    <div class="nav-bar">
+      <h1>氣候資訊地圖</h1>
+      <!-- Rounded switch -->
+      <div class="toggle-area">
+        <small>顯示行政區域</small>
+        <label class="switch">
+          <input type="checkbox" id="switch" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <button type="button" id="stations">量測站資訊</button>
+      <button type="button" id="rainfall">降雨量</button>
+      <button type="button" id="uvi">紫外線指數</button>
+      <button type="button" id="temp">氣溫</button>
+
+      <div id="rainfallSlider" class="no-ui-slider"></div>
+      <div id="tempSlider" class="no-ui-slider"></div>
+    </div>
+
+    <!-- Leaflet.js -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Heatmap.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/heatmap.js/2.0.0/heatmap.min.js"
+      integrity="sha512-FpvmtV53P/z7yzv1TAIVH7PNz94EKXs5aV6ts/Zi+B/VeGU5Xwo6KIbwpTgKc0d4urD/BtkK50IC9785y68/AA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Leaflet-Heatmap.js -->
+    <script src="
+    https://cdn.jsdelivr.net/npm/leaflet-heatmap@1.0.0/leaflet-heatmap.min.js
+    "></script>
+
+    <!-- NoUiSlider.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"
+      integrity="sha512-UOJe4paV6hYWBnS0c9GnIRH8PLm2nFK22uhfAvsTIqd3uwnWsVri1OPn5fJYdLtGY3wB11LGHJ4yPU1WFJeBYQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- main.js -->
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>

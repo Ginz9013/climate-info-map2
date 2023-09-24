@@ -1,0 +1,119 @@
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.2s;
+}
+
+input:checked + .slider {
+  background-color: #666;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #666;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+body {
+  margin: 0;
+}
+body h1 {
+  margin: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+body .nav-bar {
+  position: fixed;
+  top: 70vh;
+  right: 3rem;
+  color: black;
+  z-index: 1000;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
+body .nav-bar .toggle-area {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: #444;
+  color: white;
+  padding: 6px 12px;
+  margin: 0 2px;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+button:hover {
+  background-color: #888;
+}
+button:active {
+  scale: 0.96;
+}
+
+p {
+  color: rgb(0, 128, 100);
+}
+
+.no-ui-slider {
+  margin: 1rem auto 2rem auto;
+}
+
+.noUi-base {
+  background-color: #f0f0f0;
+}
+
+.noUi-connect {
+  background-color: #949494;
+}
+
+.noUi-value {
+  font-size: 12px;
+  margin-top: 6px;
+}/*# sourceMappingURL=main.css.map */
